@@ -24,7 +24,7 @@
 		
 		<div role="main" class="main">
 			<article id="coding-standards">
-				<h1>Coding standards</h1>			
+				<h1>Coding standards</h1>
 				<section>
 					<h1 class="beta">HTML</h1>
 					<ul>
@@ -62,8 +62,8 @@
 					<h2 class="gamma">Example of style</h2>
 <pre class="example">
 /* header */
-	<span class="selector">header nav .about-us</span>,
-	<span class="selector">header nav li:last-child</span> {
+	<span class="selector">.action .action-information</span>,
+	<span class="selector">.button .information:last-child</span> {
 		<span class="property">background</span>: <span class="property-value">url("../images/generic-logo.png") no-repeat center 0 #fff</span>;
 		<span class="property">background-image</span>: 
 			<span class="property-value">url("../images/generic-bg-bottom.png")</span>, 
@@ -97,7 +97,7 @@
 		<span class="property">z-index</span>: <span class="property-value">3</span>;
 	}
 
-	<span class="selector">header nav li a</span> {
+	<span class="selector">.action a</span> {
 		<span class="property">color</span>: <span class="property-value">rgba(0, 0, 0, .2)</span>;
 	}
 </pre>
@@ -120,11 +120,11 @@
 						<li>Alphabetical.</li>
 						<li>By the length of prefix (long to short) for vendor prefixed properties.</li>
 						<li>
-							Carry on the alphabetical order for multiple properties (e.g. border-bottom, border-left...):					
+							Carry on the alphabetical order for multiple properties (e.g. border-bottom, border-left...):
 						</li>
 					</ul>
 <pre class="example">
-<span class="selector">header nav li</span> {
+<span class="selector">.download</span> {
 	<span class="property">border-bottom</span>: <span class="property-value">1px solid #000</span>;
 	<span class="property">border-left</span>: <span class="property-value">2px solid #000</span>;
 	<span class="property">border-right</span>: <span class="property-value">1px solid #000</span>;
@@ -154,12 +154,7 @@
 					<h1 class="beta">Foundation</h1>
 					<p>Use <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> as a foundation:</p>
 					<ul>
-						<li>
-							Use <a href="http://www.modernizr.com">modernizr</a>.
-							<ul>
-								<li>Forward-facing feature support detection i.e. assume support then target lack of with no-* classes. ?</li>
-							</ul>
-						</li>
+						<li>Use <a href="http://www.modernizr.com">modernizr</a>.</li>
 						<li>
 							Use the non-semantic helper classes:
 							<ul>
@@ -214,19 +209,101 @@
 				</section>
 				
 				<section>
-					<h1 class="beta">CSS</h1>	
-					<h2 class="gamma">Selector naming</h2>
-					<pre class="example">
-.actions (grouping - plural)
-	.action (pattern - noun) .action-collapse (sub pattern - verb)
-		.action-inner  (pattern part)
-			.action-item (pattern part)
-				.action-content (pattern part)
-					.action-media (pattern part)
-					.action-copy (pattern part)
-
-.folder .is-collapsed (state - past participle)
-					</pre>
+					<h1 class="beta">CSS</h1>							
+					<h2 class="gamma">Structure of a stylesheet</h2>
+					<ol>
+						<li>fonts (including url to licence)</li>
+						<li>normalise html5</li>
+						<li>default styles (based on boilerplate/normalise)
+							<ol>
+								<li>html</li>
+								<li>body</li>
+								<li>links: <code>a, a:hover, a:active, a:visited</code></li>
+								<li>sectioning content: <code>aside, article, nav, section</code></li>
+								<li>heading content: <code>h1 &#8211; h6, hgroup</code></li>
+								<li>text-level semantics: <code>address, blockquote, code, em, pre, strong</code></li>
+								<li>
+									grouping content
+									<ol>
+										<li>lists: <code>dl, dt, dd, ul, ol, li</code></li>
+										<li>paragraphs</li>
+										<li>tables: <code>table, thead, tr, th, tbody, td</code></li>
+									</ol>
+								</li>
+								<li>form content: <code>form, fieldset, legend, label, input, textarea, select, option</code></li>
+								<li>embedding content: <code>audio, canvas, embed, iframe, img, object, video</code></li>
+							</ol>
+						</li>
+						<li>helper classes (non-semantic)</li>
+						<li>shared states</li>
+						<li>style patterns: ordered by complexity</li>
+						<li>layout patterns (non-semantic)</li>
+						<li>
+							@media queries
+							<ol>
+								<li>device width (linearised content first)
+									<ol>
+										<li>default styles (based on boilerplate/normalise)</li>
+										<li>helper classes (non-semantic)</li>
+										<li>shared states</li>
+										<li>style patterns: ordered by complexity</li>
+										<li>layout patterns (non-semantic)</li>
+									</ol>
+								</li>
+								<li>print</li>
+							</ol>
+						</li>
+					</ol>
+					<h3 class="delta">Comments and indentation</h3>
+					<p>Comment within a stylesheet to aid other developers.</p>
+					<ul>
+						<li>Title</li>
+						<li>Colour swatch</li>
+						<li>Index</li>
+						<li>Sectioning comments</li>
+						<li>Property comments</li>
+					</ul>
+<pre class="example">
+/*
+ * standards and conventions
+ *
+ * colour swatch:
+ * light blue = #005
+ * dark blue = #00C
+ *
+ * index:
+ * 1. fonts
+ * 2. normalise html5
+ * 3. default styles (based on boilerplate/normalise)
+ * 4. helper classes (non-semantic)
+ * 5. shared states
+ * 6. style patterns
+ * 7. layout patterns (non-semantic)
+ * 8. @mediaqueries
+ */
+</pre>
+					<p>Use indentation and comments to section a stylesheet. There are two types of comments:</p>
+					<ol>
+						<li>Sectioning comments.</li>
+						<li>Property comments.</li>
+					</ol>
+<pre class="example">
+/* sectioning comment e.g. "header" */
+	<span class="selector">header</span> {
+		<span class="property">margin</span>: <span class="property-value">0</span>;
+	}
+	
+	/* sectioning comment e.g. "primary navigation" */
+		<span class="selector">header nav</span> {
+			<span class="property">float</span>: <span class="property-value">left</span>;
+		}
+	
+	/* sectioning comment e.g. "search box" */
+		<span class="selector">header search</span> {
+			<span class="property">display</span>: <span class="property-value">inline</span>; /* property comment e.g. ie double margin fix */
+		}
+</pre>
+					<h2 class="gamma">Selector naming</h2>	
 					<ul>
 						<li>
 							Use:
@@ -248,102 +325,19 @@
 							</ul>
 						</li>
 						<li>Do not mimic tag names when naming classes, unless they are prefixed. e.g. <code>.component-body</code>.</li>
-						<li>Use class names that relates to the component or pattern.</li>
-					</ul>
-							
-					<h2 class="gamma">Structure of a stylesheet</h2>
-					<ol>
-						<li>fonts (including url to licence)</li>
-						<li>normalise html5</li>
-						<li>default styles (based on boilerplate/normalise)
-							<ol>
-								<li>html</li>
-								<li>body</li>
-								<li>links: <code>a, a:hover, a:active, a:visited</code></li>
-								<li>sectioning content: <code>aside, article, nav, section</code></li>
-								<li>heading content: <code>h1 &#8211; h6, hgroup</code></li>
-								<li>text-level semantics: <code>address, blockquote, code, em, pre, strong</code></li>
-								<li>
-									grouping content
-									<ol>
-										<li>paragraphs</li>
-										<li>lists: <code>dl, dt, dd, ul, ol, li</code></li>
-										<li>tables: <code>table, thead, tr, th, tbody, td</code></li>
-									</ol>
-								</li>
-								<li>form content: <code>form, fieldset, legend, label, input, textarea, select, option</code></li>
-								<li>embedding content: <code>audio, canvas, embed, iframe, img, object, video</code></li>
-							</ol>
-						</li>
-						<li>helper classes (non-semantic)</li>
-						<li>patterns: ordered by size</li>
-						<li>layouts (non-semantic)</li>
-						<li>
-							@media queries
-							<ol>
-								<li>device width (linearised content first)
-									<ol>
-										<li>default styles (based on boilerplate/normalise)</li>
-										<li>patterns: ordered by size</li>
-										<li>layouts (non-semantic)</li>
-									</ol>
-								</li>
-								<li>print</li>
-							</ol>
-						</li>
-					</ol>	
-					<h3 class="delta">Comments and indentation</h3>
-					<p>Comment within a stylesheet to aid other developers.</p>
-					<ul>
-						<li>Title</li>
-						<li>Colour swatch</li>
-						<li>Index</li>
-						<li>Sectioning comments</li>
-						<li>Property comments</li>
 					</ul>
 <pre class="example">
-/*
- * standards and conventions
- *
- * colour swatch:
- * light blue = #005A9C
- * dark blue = #00C
- *
- * index:
- * 1. fonts
- * 2. normalise html5
- * 3. default styles (based on boilerplate/normalise)
- * 4. helper classes (non-semantic)
- * 5. shared states
- * 6. patterns
- * 7. layout styles (non-semantic)
- * 8. @mediaqueries
- */
+.actions (grouping - plural)
+	.action (pattern - noun) .action-collapse (sub pattern - verb)
+		.action-inner  (pattern part)
+			.action-item (pattern part)
+				.action-content (pattern part)
+					.action-media (pattern part)
+					.action-copy (pattern part)
+
+.folder .is-collapsed (state - past participle)
 </pre>
-					<p class="note">An author tag is not permitted.</p>
-					<p>Use indentation and comments to section a stylesheet. There are two types of comments:</p>
-					<ol>
-						<li>Sectioning comments.</li>
-						<li>Property comments.</li>
-					</ol>
-<pre class="example">
-/* sectioning comment e.g. "header" */
-	<span class="selector">header</span> {
-		<span class="property">margin</span>: <span class="property-value">0</span>;
-	}
-	
-	/* sectioning comment e.g. "primary navigation" */
-		<span class="selector">header nav</span> {
-			<span class="property">float</span>: <span class="property-value">left</span>;
-		}
-	
-	/* sectioning comment e.g. "search box" */
-		<span class="selector">header search</span> {
-			<span class="property">float</span>: <span class="property-value">right</span>;
-			<span class="property">font-family</span>: <span class="property-value">"RolexGothicLightRegular", "Lucida Sans Unicode", "Lucida Grande", sans-serif</span>; /* Rolex font stack */
-		}		
-</pre>						
-					<h2 class="gamma">Progressive enhancement</h2>
+					<h2 class="gamma">Progressive enhancement in CSS</h2>
 					<h3 class="delta">Modernizr</h3>
 					<ul>
 						<li>
@@ -357,7 +351,7 @@
 					<h3 class="delta">Backgrounds (language feature)</h3>
 <pre class="example">
 <span class="selector">#wimbledon-video span</span> {
-	<span class="property">background</span>: <span class="property-value">url("/images/backgrounds/transparency-layers/000-50.png") repeat</span>; /* IE fix */
+	<span class="property">background</span>: <span class="property-value">url("/images/background-000-50.png") repeat</span>; /* IE fix */
 	<span class="property">background</span>: <span class="property-value">rgba(0, 0, 0, 0.5)</span>;
 }
 </pre>
@@ -371,11 +365,15 @@
 					</p>
 					<ul>
 						<li>
-							Ensure the font is correctly licensed before the creation of style tiles. 
+							Ensure the font is correctly licensed. 
 							Find a licence using a <a href="http://sprungmarker.de/wp-content/uploads/webfont-services/">webfont service</a>.
 						</li>
 						<li>Ensure the rendering quality of the font is acceptable in all browsers.</li>
 						<li>Ensure acceptable loading times are maintained as fonts are added.</li>
+						<li>
+							Ensure the correct font weights are included and 
+							<a href="http://www.fontspring.com/support/troubleshooting/style-linking">linked correctly</a>.
+						</li>
 					</ul>
 					</section>	
 						
@@ -388,15 +386,13 @@
 	/images
 	/scripts
 		project.js
+		jquery.standout.js
 	/styles
-		lteie7.css
-		project.css
-		project-orange.css
+		project-name.css
 	/swfs
 	/vendor
-		/libs
-			jquery-1.6.2.min.js
-			modernizr.js
+		jquery.js
+		modernizr.js
 		/fancybox
 		jquery.scrollTo.js
 </pre>
@@ -405,9 +401,9 @@
 					<p>Use spritesheets only for <em>grouped sets of icons</em>.</p>
 					<h3 class="delta">Image Formats</h3>
 					<ul>
-						<li>Use JPEG for photos or complex images/icons.</li>
+						<li>Use JPEG for photos and complex images/icons.</li>
 						<li>Use PNG 8 for small and simple images/icons.</li>
-						<li>Use PNG 24 for multi-channel transparency.</li>			
+						<li>Use PNG 24 for multi-channel transparency.</li>
 					</ul>
 				</section>
 				
@@ -415,7 +411,7 @@
 					<h1 class="beta">Accessibility</h1>
 					<ul>
 						<li>Adhere to the <a href="http://wcagsamurai.org/errata/errata.html">WCAG Samurai</a> checklist.</li>
-						<li>Do not check using accessibility validators.</li>				
+						<li>Do not check using accessibility validators.</li>
 					</ul>
 				</section>
 			</article>
@@ -446,7 +442,7 @@
 											<li>Heading groups.</li>
 										</ul>
 									</li>
-									<li>Identify six levels of headings.</li>									
+									<li>Identify six levels of headings.</li>
 									<li>
 										Identify form elements
 										<ul>
@@ -463,6 +459,14 @@
 									<li>Actions</li>
 									<li>Navigation</li>
 									<li>Content blocks</li>
+									<li>etc...</li>
+								</ul>
+							</li>
+							<li>
+								Identify layout patterns:
+								<ul>
+									<li>Grids</li>
+									<li>Positioning</li>
 									<li>etc...</li>
 								</ul>
 							</li>
@@ -485,16 +489,19 @@
 							</li>
 						</ol>
 					</li>
-					<li>Produce a draft mapping of the relationships between patterns.</li>
+					<li>Produce a draft mapping of the relationships between patterns in each set.</li>
 					<li>
-						Build a toolkit...
+						Build a toolkit:
 						<ul>
 							<li>
 								with the following sections:
 								<ul>
-									<li>Demo of style patterns.</li>	
+									<li>Base styles</li>
+									<li>Demo of style patterns.</li>
+									<li>Demo of layout patterns.</li>
 									<li>Demo of animation patterns.</li>
 									<li>Demo of interaction patterns.</li>
+									<li>Components built from the patterns.</li>
 								</ul>	
 							</li>
 							<li>
@@ -503,16 +510,17 @@
 									<li>Self-annotating and with common language between design and development.</li>	
 									<li>A reference for default typography, padding, margin etc.</li>
 									<li>Built-in relationship mapping.</li>
-								</ul>	
+									<li>Testable.</li>
+								</ul>
 							</li>
 						</ul>
 					</li>
 				</ol>
-			</article>	
+			</article>
 		</div>
 
 		<aside class="complementary" role="complementary">
-			<h1>A few notes on the why...</h1>
+			<h1 class="beta">A few notes on the why...</h1>
 			<details>
 				<summary>A collection of best practise standards from around the web and for our specific project needs.</summary>
 				<dl>
@@ -541,7 +549,7 @@
 					<dd>Some earlier poor quality fonts render horribly in IE.</dd>
 					<dd>A single weight of font can be around 50k. Having 3 weights can add up 150k to a project.</dd>
 				</dl>
-			</details>				
+			</details>
 		</aside>
 		
 		<footer class="content-info" role="contentinfo">
