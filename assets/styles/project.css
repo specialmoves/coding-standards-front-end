@@ -6,7 +6,7 @@
  * black = #4c4c4c
  * blue = #0000cc
  * purple = #551a8b
- * green = #1dcc00
+ * green = #149900
  * orange = #ffaa00
  * light grey = #eaeaea;
  * code light red = #f00
@@ -151,7 +151,7 @@
 		
 	/* text-level semantics */
 		code {
-			color: #1dcc00;
+			color: #149900;
 			font-family: monospace, monospace;
 			font-size: 0.813em;
 		}
@@ -194,7 +194,7 @@
 			}
 		
 			pre {
-				border: 0.0769em solid #1dcc00;
+				border: 0.0769em solid #149900;
 				border-width: 0.0769em 0;
 				font-size: 0.813em;
 				font-family: monospace, monospace;
@@ -292,7 +292,7 @@
 	/* code examples */
 		.example:before,
 		.structure:before {
-			background: #1dcc00;
+			background: #149900;
 			color: #fff;
 			content: "Example";
 			display: block;
