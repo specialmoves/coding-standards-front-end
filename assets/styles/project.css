@@ -3,14 +3,15 @@
  *
  * colour swatch:
  * white = #fff
- * black = #000
- * light blue = #005A9C
- * dark blue = #00C
- * orange = #FF4500
- * light grey = #EAEAEA;
- * code light red = #F00
- * code dark red = #A31515
- * code blue = #00F
+ * black = #4c4c4c
+ * blue = #0000cc
+ * purple = #551a8b
+ * green = #149900
+ * orange = #ffaa00
+ * light grey = #eaeaea;
+ * code light red = #f00
+ * code dark red = #a31515
+ * code blue = #00f
  *
  * index:
  * 1. fonts
@@ -59,7 +60,7 @@
 	}
 	
 	body {
-		color: #000;	
+		color: #4c4c4c;	
 		background: #fff;
 		font-family: Helmet, Freesans, sans-serif;
 		line-height: 1.5;
@@ -102,7 +103,7 @@
 		}
 			
 		aside {
-			border: 0.0625em solid #EAEAEA;
+			border: 0.0625em solid #eaeaea;
 			border-width: 0.0625em 0;
 			margin: 0 0 2em 0;
 			padding-top: 1em;
@@ -125,7 +126,7 @@
 		.beta,
 		.gamma,
 		.delta {
-			color: #005a9c;
+			color: #ffaa00;
 			font-family: PTSansRegular, Helmet, Freesans, sans-serif;
 			font-size: 2em;
 			font-weight: normal;
@@ -150,7 +151,7 @@
 		
 	/* text-level semantics */
 		code {
-			color: #FF4500;
+			color: #149900;
 			font-family: monospace, monospace;
 			font-size: 0.813em;
 		}
@@ -193,7 +194,7 @@
 			}
 		
 			pre {
-				border: 0.0769em solid #FF4500;
+				border: 0.0769em solid #149900;
 				border-width: 0.0769em 0;
 				font-size: 0.813em;
 				font-family: monospace, monospace;
@@ -291,7 +292,7 @@
 	/* code examples */
 		.example:before,
 		.structure:before {
-			background: #ff4500;
+			background: #149900;
 			color: #fff;
 			content: "Example";
 			display: block;
@@ -306,15 +307,15 @@
 		
 	/* copy high-lighting */
 		.selector {
-			color: #A31515;
+			color: #a31515;
 		}
 		
 		.property {
-			color: #F00;
+			color: #f00;
 		}
 		
 		.property-value {
-			color: #00F;
+			color: #00f;
 		}
 		
 	/* header */
