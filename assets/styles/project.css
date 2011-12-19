@@ -9,9 +9,9 @@
  * green = #149900
  * orange = #ffaa00
  * light grey = #ddd;
- * code light red = #f00
+ * code light red = #ff0000
  * code dark red = #a31515
- * code blue = #00f
+ * code blue = #0000ff
  *
  * index:
  * 1. fonts
@@ -306,16 +306,20 @@
 		}
 		
 	/* copy high-lighting */
+		.comment {
+			color: #006400;
+		}
+		
 		.selector {
-			color: #a31515;
+			color: #800000;
 		}
 		
 		.property {
-			color: #f00;
+			color: #ff0000;
 		}
 		
 		.property-value {
-			color: #00f;
+			color: #0000ff;
 		}
 		
 	/* header */
