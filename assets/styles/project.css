@@ -8,7 +8,7 @@
  * purple = #551a8b
  * green = #149900
  * orange = #ffaa00
- * light grey = #eaeaea;
+ * light grey = #ddd;
  * code light red = #f00
  * code dark red = #a31515
  * code blue = #00f
@@ -72,11 +72,11 @@
 		a {
 			color: #0000cc;	
 			text-decoration: underline;
-			-webkit-transition: all 0.7s ease;
-			-moz-transition: all 0.7s ease;
-			-ms-transition: all 0.7s ease;
-			-o-transition: all 0.7s ease;
-			transition: all 0.7s ease;
+			-webkit-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
 		}
 		
 		a:hover,
@@ -103,7 +103,7 @@
 		}
 			
 		aside {
-			border: 0.0625em solid #eaeaea;
+			border: 0.0625em solid #ddd;
 			border-width: 0.0625em 0;
 			margin: 0 0 2em 0;
 			padding-top: 1em;
@@ -126,7 +126,7 @@
 		.beta,
 		.gamma,
 		.delta {
-			color: #53777A;
+			color: #000;
 			font-family: PTSansRegular, Helmet, Freesans, sans-serif;
 			font-size: 2em;
 			font-weight: normal;
@@ -151,7 +151,7 @@
 		
 	/* text-level semantics */
 		code {
-			color: #D95B43;
+			color: #f00;
 			font-family: monospace, monospace;
 			font-size: 0.813em;
 		}
@@ -194,7 +194,7 @@
 			}
 		
 			pre {
-				border: 0.0769em solid #D95B43;
+				border: 0.0769em solid #aaa;
 				border-width: 0.0769em 0;
 				font-size: 0.813em;
 				font-family: monospace, monospace;
@@ -292,7 +292,7 @@
 	/* code examples */
 		.example:before,
 		.structure:before {
-			background: #D95B43;
+			background: #aaa;
 			color: #fff;
 			content: "Example";
 			display: block;
