@@ -60,7 +60,7 @@
 	}
 	
 	body {
-		color: #4c4c4c;	
+		color: #000;	
 		background: #fff;
 		font-family: Helmet, Freesans, sans-serif;
 		line-height: 1.5;
@@ -126,7 +126,7 @@
 		.beta,
 		.gamma,
 		.delta {
-			color: #ffaa00;
+			color: #53777A;
 			font-family: PTSansRegular, Helmet, Freesans, sans-serif;
 			font-size: 2em;
 			font-weight: normal;
@@ -151,7 +151,7 @@
 		
 	/* text-level semantics */
 		code {
-			color: #149900;
+			color: #D95B43;
 			font-family: monospace, monospace;
 			font-size: 0.813em;
 		}
@@ -194,7 +194,7 @@
 			}
 		
 			pre {
-				border: 0.0769em solid #149900;
+				border: 0.0769em solid #D95B43;
 				border-width: 0.0769em 0;
 				font-size: 0.813em;
 				font-family: monospace, monospace;
@@ -292,7 +292,7 @@
 	/* code examples */
 		.example:before,
 		.structure:before {
-			background: #149900;
+			background: #D95B43;
 			color: #fff;
 			content: "Example";
 			display: block;
