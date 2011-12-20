@@ -11,20 +11,20 @@
 	</head>
 	<body>
 		<header class="banner" role="banner">
-			<h1>Coding standards, development guidelines and process</h1>
+			<h1>Interface development standards</h1>
 		</header>
 
 		<nav class="navigation" role="navigation">
 			<ul>
-				<li><a href="#coding-standards">Coding standards</a></li>
+				<li><a href="#code-formatting">Code formatting</a></li>
 				<li><a href="#development-guidelines">Development guidelines</a></li>
 				<li><a href="#development-process">Development process</a></li>
 			</ul>
 		</nav>
 		
 		<div role="main" class="main">
-			<article id="coding-standards">
-				<h1>Coding standards</h1>
+			<article id="code-formatting">
+				<h1>Code formatting</h1>
 				<section>
 					<h1 class="beta">HTML</h1>
 					<ul>
@@ -61,7 +61,7 @@
 					<h1 class="beta">CSS</h1>
 					<h2 class="gamma">Example of style</h2>
 <pre class="example">
-/* header */
+<span class="comment">/* header */</span>
 	<span class="selector">.action .action-information</span>,
 	<span class="selector">.button .information:last-child</span> {
 		<span class="property">background</span>: <span class="property-value">url("../images/generic-logo.png") no-repeat center 0 #fff</span>;
@@ -69,7 +69,7 @@
 			<span class="property-value">url("../images/generic-bg-bottom.png")</span>, 
 			<span class="property-value">url("../images/generic-bg-top.png")</span>;
 		<span class="property">border</span>: <span class="property-value">1px solid #000</span>;
-		<span class="property">-webkit-box-shadow</span>: /* multiple properties on different lines */
+		<span class="property">-webkit-box-shadow</span>: <span class="comment">/* multiple properties on different lines */</span>
 			<span class="property-value">0 1px 3px rgba(0, 0, 0, .2)</span>, 
 			<span class="property-value">0 2px 6px rgba(0, 0, 0, .1)</span>;
 		<span class="property">-moz-box-shadow</span>: 
@@ -86,8 +86,8 @@
 			<span class="property-value">0 2px 6px rgba(0, 0, 0, .1)</span>;
 		<span class="property">color</span>: <span class="property-value">#333</span>;
 		<span class="property">display</span>: <span class="property-value">block</span>;
-		<span class="property">font-family</span>: <span class="property-value">Helmet, Freesans, sans-serif</span>; /* bbc glue font stack /*
-		<span class="property">font-size</span>: <span class="property-value">1.3em</span>; /* only use ems for font-sizes (including on the body) */
+		<span class="property">font-family</span>: <span class="property-value">Helmet, Freesans, sans-serif</span>; <span class="comment">/* bbc glue font stack /*</span>
+		<span class="property">font-size</span>: <span class="property-value">1.3em</span>; <span class="comment">/* only use ems for font-sizes (including on the body) */</span>
 		<span class="property">padding</span>: <span class="property-value">5px 0 2% 0</span>;
 		<span class="property">-webkit-transition</span>: <span class="property-value">all 0.7s ease</span>;
 		<span class="property">-moz-transition</span>: <span class="property-value">all 0.7s ease</span>;
@@ -263,8 +263,7 @@
 						<li>Sectioning comments</li>
 						<li>Property comments</li>
 					</ul>
-<pre class="example">
-/*
+<pre class="example"><span class="comment">/*
  * standards and conventions
  *
  * colour swatch:
@@ -281,6 +280,7 @@
  * 7. layout patterns (non-semantic)
  * 8. @mediaqueries
  */
+</span>
 </pre>
 					<p>Use indentation and comments to section a stylesheet. There are two types of comments:</p>
 					<ol>
@@ -288,19 +288,19 @@
 						<li>Property comments.</li>
 					</ol>
 <pre class="example">
-/* sectioning comment e.g. "header" */
+<span class="comment">/* sectioning comment e.g. "header" */</span>
 	<span class="selector">header</span> {
 		<span class="property">margin</span>: <span class="property-value">0</span>;
 	}
 	
-	/* sectioning comment e.g. "primary navigation" */
+	<span class="comment">/* sectioning comment e.g. "primary navigation" */</span>
 		<span class="selector">header nav</span> {
 			<span class="property">float</span>: <span class="property-value">left</span>;
 		}
 	
-	/* sectioning comment e.g. "search box" */
+	<span class="comment">/* sectioning comment e.g. "search box" */</span>
 		<span class="selector">header search</span> {
-			<span class="property">display</span>: <span class="property-value">inline</span>; /* property comment e.g. ie double margin fix */
+			<span class="property">display</span>: <span class="property-value">inline</span>; <span class="comment">/* property comment e.g. ie double margin fix */</span>
 		}
 </pre>
 					<h2 class="gamma">Selector naming</h2>	
@@ -315,11 +315,11 @@
 								<li>
 									The following for pattern parts:
 									<ul>
-										<li>&lt;pattern name&gt;&#8211;inner &#8594; for inner wrapper</li>
-										<li>&lt;pattern name&gt;&#8211;item &#8594; for the most common and repeating element in the pattern</li>
-										<li>&lt;pattern name&gt;&#8211;content &#8594; for containing both media and text</li>
-										<li>&lt;pattern name&gt;&#8211;media &#8594; for targeting imgs, swf, video</li>
-										<li>&lt;pattern name&gt;&#8211;copy &#8594; for containing only text e.g. headings and paragraphs</li>
+										<li><code>&lt;pattern name&gt;&#8211;inner</code> &#8594; for inner wrapper</li>
+										<li><code>&lt;pattern name&gt;&#8211;item</code> &#8594; for the most common and repeating element in the pattern</li>
+										<li><code>&lt;pattern name&gt;&#8211;content</code> &#8594; for containing both media and text</li>
+										<li><code>&lt;pattern name&gt;&#8211;media</code> &#8594; for targeting imgs, swf, video</li>
+										<li><code>&lt;pattern name&gt;&#8211;copy</code> &#8594; for containing only text e.g. headings and paragraphs</li>
 									</ul>
 								</li>
 							</ul>
@@ -327,15 +327,15 @@
 						<li>Do not mimic tag names when naming classes, unless they are prefixed. e.g. <code>.component-body</code>.</li>
 					</ul>
 <pre class="example">
-.actions (grouping - plural)
-	.action (pattern - noun) .action-collapse (sub pattern - verb)
-		.action-inner  (pattern part)
-			.action-item (pattern part)
-				.action-content (pattern part)
-					.action-media (pattern part)
-					.action-copy (pattern part)
+<span class="selector">.actions</span> (grouping - plural)
+	<span class="selector">.action</span> (pattern - noun) <span class="selector">.action-collapse</span> (sub pattern - verb)
+		<span class="selector">.action-inner</span> (pattern part)
+			<span class="selector">.action-item</span> (pattern part)
+				<span class="selector">.action-content</span> (pattern part)
+					<span class="selector">.action-media</span> (pattern part)
+					<span class="selector">.action-copy</span> (pattern part)
 
-.folder .is-collapsed (state - past participle)
+<span class="selector">.folder .is-collapsed</span> (state - past participle)
 </pre>
 					<h2 class="gamma">Progressive enhancement in CSS</h2>
 					<h3 class="delta">Modernizr</h3>
@@ -350,8 +350,8 @@
 					</ul>
 					<h3 class="delta">Backgrounds (language feature)</h3>
 <pre class="example">
-<span class="selector">#wimbledon-video span</span> {
-	<span class="property">background</span>: <span class="property-value">url("/images/background-000-50.png") repeat</span>; /* IE fix */
+<span class="selector">.text-area</span> {
+	<span class="property">background</span>: <span class="property-value">url("/images/background-000-50.png") repeat</span>; <span class="comment">/* IE fix */</span>
 	<span class="property">background</span>: <span class="property-value">rgba(0, 0, 0, 0.5)</span>;
 }
 </pre>
