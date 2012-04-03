@@ -53,7 +53,7 @@
 								<li>Wrap long lines of text and treat as block-level elements, using 150 char length as a guide.</li>
 							</ul>
 						</li>
-						<li>Use tabs for indentation.</li>
+						<li>Use tabs for indentation - length of 4 spaces.</li>
 					</ul>
 				</section>
 				
@@ -89,11 +89,11 @@
 		<span class="property">font-family</span>: <span class="property-value">Helmet, Freesans, sans-serif</span>; <span class="comment">/* bbc glue font stack /*</span>
 		<span class="property">font-size</span>: <span class="property-value">1.3em</span>; <span class="comment">/* only use ems for font-sizes (including on the body) */</span>
 		<span class="property">padding</span>: <span class="property-value">5px 0 2% 0</span>;
-		<span class="property">-webkit-transition</span>: <span class="property-value">all 0.7s ease</span>;
-		<span class="property">-moz-transition</span>: <span class="property-value">all 0.7s ease</span>;
-		<span class="property">-ms-transition</span>: <span class="property-value">all 0.7s ease</span>;
-		<span class="property">-o-transition</span>: <span class="property-value">all 0.7s ease</span>;
-		<span class="property">transition</span>: <span class="property-value">all 0.7s ease</span>;
+		<span class="property">-webkit-transition</span>: <span class="property-value">all 700ms ease</span>; <span class="comment">/* use ms for duration */</span>
+		<span class="property">-moz-transition</span>:    <span class="property-value">all 700ms ease</span>;
+		<span class="property">-ms-transition</span>:     <span class="property-value">all 700ms ease</span>;
+		<span class="property">-o-transition</span>:      <span class="property-value">all 700ms ease</span>;
+		<span class="property">transition</span>:         <span class="property-value">all 700ms ease</span>;
 		<span class="property">z-index</span>: <span class="property-value">3</span>;
 	}
 
@@ -136,6 +136,16 @@
 						<li><code>background: [colour] ["url"] [scroll] [repeat] [position];</code></li>
 						<li><code>border: [size] [type] [colour];</code></li>
 					</ul>
+
+					<h2 class="gamma">Prefixed Property value spacing</h2>
+<pre class="example">
+<span class="selector">.download</span> {
+	<span class="property">-webkit-transition</span>: <span class="property-value">all 700ms ease</span>;
+	<span class="property">-moz-transition</span>:    <span class="property-value">all 700ms ease</span>;
+	<span class="property">-ms-transition</span>:     <span class="property-value">all 700ms ease</span>;
+	<span class="property">-o-transition</span>:      <span class="property-value">all 700ms ease</span>;
+	<span class="property">transition</span>:         <span class="property-value">all 700ms ease</span>;
+}		
 				</section>
 				
 				<section>
