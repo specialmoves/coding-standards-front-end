@@ -35,7 +35,7 @@
 			font-weight: normal;
 			font-style: normal;
 		}
-	
+
 /* 2. normalise html5 */
 	/* corrects block display not defined in IE6/7/8/9 & FF3 */
 		article,
@@ -55,22 +55,22 @@
 	html {
 		font-size: 100%;
 		overflow-y: scroll;
-		-webkit-text-size-adjust: 100%; 
-		-ms-text-size-adjust: 100%; 
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
 	}
-	
+
 	body {
-		color: #000;	
+		color: #000;
 		background: #fff;
 		font-family: Helmet, Freesans, sans-serif;
 		line-height: 1.5;
 		margin: 0;
 		padding: 1em 5%;
 	}
-	
-	/* links */	
+
+	/* links */
 		a {
-			color: #0000cc;	
+			color: #0000cc;
 			text-decoration: underline;
 			-webkit-transition: all 0.3s ease;
 			-moz-transition: all 0.3s ease;
@@ -78,41 +78,41 @@
 			-o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
 		}
-		
+
 		a:hover,
 		a:active {
 			outline: 0;
 		}
 
 		a:hover,
-		a:focus { 
+		a:focus {
 			background: #ffffaa;
 		}
-		
+
 		a:focus {
 			outline: thin dotted;
 		}
-	
+
 		a:visited {
 			color: #551a8b;
 		}
-	
+
 	/* sectioning content */
 		article {
 			margin: 0 0 6em 0;
 		}
-			
+
 		aside {
 			border: 0.0625em solid #ddd;
 			border-width: 0.0625em 0;
 			margin: 0 0 2em 0;
 			padding-top: 1em;
 		}
-		
+
 		details {
 			margin: 0 0 1em 0;
 		}
-		
+
 		section {
 			margin: 0 0 2em 0;
 		}
@@ -133,7 +133,7 @@
 			line-height: 1;
 			margin: 0 0 0.5em 0;
 		}
-		
+
 		h2,
 		.beta {
 			font-size: 1.75em;
@@ -143,19 +143,19 @@
 		.gamma {
 			font-size: 1.375em;
 		}
-		
+
 		h4,
 		.delta {
 			font-size: 1.125em;
 		}
-		
+
 	/* text-level semantics */
 		code {
 			color: #f00;
 			font-family: monospace, monospace;
 			font-size: 0.813em;
 		}
-		
+
 		.oldie code {
 			_font-family: 'courier new', monospace;
 		}
@@ -165,34 +165,34 @@
 			dl {
 				margin-bottom: 2.5em;
 			}
-			
+
 			dl dt {
 				font-style: italic;
 			}
-			
+
 			dl dd {
 				margin: 0.5em 0 0.5em 2.5em;
 			}
-		
+
 			ol,
 			ul {
 				margin: 0 0 2em 0;
 				padding: 0 0 0 2.5em;
 			}
-			
+
 			ol ol,
 			ul ul,
 			ul ol,
 			ol ul {
 				margin-bottom: 0;
 			}
-		
+
 		/* paragraphs and pre */
-			p, 
+			p,
 			pre {
 				margin: 0 0 2em 0;
 			}
-		
+
 			pre {
 				border: 0.0769em solid #aaa;
 				border-width: 0.0769em 0;
@@ -203,7 +203,7 @@
 				white-space: pre-wrap;
 				word-wrap: break-word;*/
 			}
-		
+
 			.oldie pre {
 				_font-family: 'courier new', monospace;
 			}
@@ -230,7 +230,7 @@
 		.oldie .clearfix {
 			*zoom: 1;
 		}
-		
+
 	/* image replacement */
 		.image-replacement {
 			background-repeat: no-repeat;
@@ -240,26 +240,26 @@
 			text-align: left;
 			text-indent: -999em;
 		}
-		
+
 	/* inline-block */
 		.inline-block {
 			display: -moz-inline-box;
 			display: inline-block;
 			position: relative;
 		}
-		
+
 		.oldie .inline-block {
 			*display: inline;
 			*zoom: 1;
 		}
-		
+
 /* 5. shared states */
 	/* hidden */
 		.is-hidden,
 		[hidden] {
 			display: none;
 			visibility: hidden;
-		} 
+		}
 
 	/* hide only visually, but have it available for screenreaders */
 		.is-visually-hidden {
@@ -300,37 +300,37 @@
 			padding: 0.27em;
 			width: 10em;
 		}
-		
+
 		.structure:before {
 			content: "Structure";
 		}
-		
+
 	/* copy high-lighting */
 		.comment {
 			color: #006400;
 		}
-		
+
 		.selector {
 			color: #800000;
 		}
-		
+
 		.property {
 			color: #ff0000;
 		}
-		
+
 		.property-value {
 			color: #0000ff;
 		}
-		
+
 	/* header */
 		.banner {
 			margin-bottom: 2em;
 		}
-		
+
 		.banner h1 {
 			font-size: 2.5em;
 		}
-		
+
 	/* footer */
 		.content-info small {
 			font-size: 0.750em;
@@ -345,7 +345,7 @@
 				max-width: 60em;
 			}
 		}
-		
+
 	/* print */
 		@media print {
 			* {
@@ -360,52 +360,52 @@
 				filter: none !important;
 				text-shadow: none !important;
 			}
-			
-			a, 
-			a:visited { 
+
+			a,
+			a:visited {
 				color: #9c9c9c !important;
 				text-decoration: underline;
 			}
-			
+
 			a[href]:after {
 				content: " (" attr(href) ")";
 			}
-			
+
 			abbr[title]:after {
 				content: " (" attr(title) ")";
 			}
-			
+
 			.image-replacement a:after,
 			a[href^="javascript:"]:after,
 			a[href^="#"]:after {
 				content: "";
 			}
-			
+
 			pre,
 			blockquote {
 				page-break-inside: avoid;
 			}
-			
+
 			thead {
 				display: table-header-group;
 			}
-			
+
 			tr,
 			img {
 				page-break-inside: avoid;
 			}
-			
-			@page { 
+
+			@page {
 				margin: 0.5cm;
 			}
-			
+
 			p,
 			h2,
 			h3 {
 				orphans: 3;
 				widows: 3;
 			}
-			
+
 			h2,
 			h3 {
 				page-break-after: avoid;
