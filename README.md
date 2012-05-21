@@ -9,11 +9,11 @@
 	* Use double quotation marks for attributes.
 	* Use the minimized tag syntax, with a space before the closing slash, for void elements, e.g. &lt;br /&gt;.
 *Use consistent line breaks:
-	*Add line breaks only between sibling sectioning elements & ARIA landmark roles.
-	*Place inline tags on the same line.
-	*Place block-level tags on a new line and indented.
-	*Include templating serverside code as part of the nesting of elements.
-	*Wrap long lines of text and treat as block-level elements, using 150 char length as a guide.
+	* Add line breaks only between sibling sectioning elements & ARIA landmark roles.
+	* Place inline tags on the same line.
+	* Place block-level tags on a new line and indented.
+	* Include templating serverside code as part of the nesting of elements.
+	* Wrap long lines of text and treat as block-level elements, using 150 char length as a guide.
 
 ##CSS
 
