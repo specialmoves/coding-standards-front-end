@@ -5,9 +5,9 @@
 ##HTML
 
 * Use Polygot Markup with the following emphasis:
-	* Use XHTML compliant Boolean attributes e.g. <input type="text" required="required" />.
+	* Use XHTML compliant Boolean attributes e.g. &lt;input type="text" required="required" /&gt;.
 	* Use double quotation marks for attributes.
-	* Use the minimized tag syntax, with a space before the closing slash, for void elements, e.g. <br />.
+	* Use the minimized tag syntax, with a space before the closing slash, for void elements, e.g. &lt;br /&gt;.
 *Use consistent line breaks:
 	*Add line breaks only between sibling sectioning elements & ARIA landmark roles.
 	*Place inline tags on the same line.
@@ -128,20 +128,20 @@ Use HTML5 Boilerplate as a foundation:
 * Use HTML5 semantic tags e.g. sectioning and form elements.
 * Use Microformats and HTML5 microdata.
 * Use WAI-ARIA landmark roles - see this blog post for more information. Never use ARIA roles to target CSS styles.
-* Place all Javascript before the closing </body> tag, except modernizr.
+* Place all Javascript before the closing &lt;/body&gt; tag, except modernizr.
 * Use Classes over IDs with the exception of:
 	* In-page navigation.
 
 With the following exceptions:
 
 * Use an IE conditional class and "safe hacks".
-* Order the <head> as follows:
-	1. <meta>
+* Order the &lt;head&gt; as follows:
+	1. &lt;meta&gt;
 		1. Charset first.
 		2. Then alphabetically ordered.
-	2. <title>
-	3. <link>
-	4. <script>
+	2. &lt;title&gt;
+	3. &lt;link&gt;
+	4. &lt;script&gt;
 
 ###CSS
 
@@ -231,11 +231,11 @@ Use indentation and comments to section a stylesheet. There are two types of com
 	* Adjectives (where possible) or verbs for variations
 	* Past-participle verbs for states.
 	* The following for pattern parts:
-		* <pattern name>–inner → for inner wrapper
-		* <pattern name>–item → for the most common and repeating element in the pattern
-		* <pattern name>–content → for containing both media and text
-		* <pattern name>–media → for targeting imgs, swf, video
-		* <pattern name>–copy → for containing only text e.g. headings and paragraphs
+		* &lt;pattern name&gt;–inner → for inner wrapper
+		* &lt;pattern name&gt;–item → for the most common and repeating element in the pattern
+		* &lt;pattern name&gt;–content → for containing both media and text
+		* &lt;pattern name&gt;–media → for targeting imgs, swf, video
+		* &lt;pattern name&gt;–copy → for containing only text e.g. headings and paragraphs
 
 * Do not mimic tag names when naming classes, unless they are prefixed. e.g. .component-body.
 
@@ -322,55 +322,55 @@ Use spritesheets only for grouped sets of icons.
 
 Development Process
 
-Annotate designs to:
-Identify a colour palette.
-Identify the "base styles" using a "typography-first" approach:
-Identify the body copy (the most common block of copy) and its following properties:
-Font family.
-Font size.
-Line height.
-Identify text-based grouping elements (and their box models):
-Paragraphs.
-Lists.
-Heading groups.
-Identify six levels of headings.
-Identify form elements
-Legends.
-Labels.
-Inputs.
-Identify style patterns, subpatterns and pattern parts (starting with most common and smallest first):
-Actions
-Navigation
-Content blocks
-etc...
-Identify layout patterns:
-Grids
-Positioning
-etc...
-Identify animation patterns:
-Colour transitions (e.g. on simple links)
-Show & hide (e.g. reveals, slides, fades)
-etc...
-Identify interaction patterns:
-Clicks
-Drags
-Hovers (including simple links)
-etc...
-Produce a draft mapping of the relationships between patterns in each set.
-Build a toolkit:
-with the following sections:
-Base styles
-Demo of style patterns.
-Demo of layout patterns.
-Demo of animation patterns.
-Demo of interaction patterns.
-Components built from the patterns.
-and with the following features:
-Self-annotating and with common language between design and development.
-A reference for default typography, padding, margin etc.
-Built-in relationship mapping.
-Testable.
-A few notes on the why...
+1. Annotate designs to:
+	1. Identify a colour palette.
+	2. Identify the "base styles" using a "typography-first" approach:
+		1. Identify the body copy (the most common block of copy) and its following properties:
+			* Font family.
+			* Font size.
+			* Line height.
+		2. Identify text-based grouping elements (and their box models):
+			* Paragraphs.
+			* Lists.
+			* Heading groups.
+		3. Identify six levels of headings.
+		4. Identify form elements
+			* Legends.
+			* Labels.
+			* Inputs.
+	3. Identify style patterns, subpatterns and pattern parts (starting with most common and smallest first):
+		* Actions
+		* Navigation
+		* Content blocks
+		* etc...
+	4. Identify layout patterns:
+		* Grids
+		* Positioning
+		* etc...
+	5. Identify animation patterns:
+		* Colour transitions (e.g. on simple links)
+		* Show & hide (e.g. reveals, slides, fades)
+		* etc...
+	6. Identify interaction patterns:
+		* Clicks
+		* Drags
+		* Hovers (including simple links)
+		* etc...
+2. Produce a draft mapping of the relationships between patterns in each set.
+3. Build a toolkit:
+	* with the following sections:
+		* Base styles
+		* Demo of style patterns.
+		* Demo of layout patterns.
+		* Demo of animation patterns.
+		* Demo of interaction patterns.
+		* Components built from the patterns.
+	* and with the following features:
+		* Self-annotating and with common language between design and development.
+		* A reference for default typography, padding, margin etc.
+		* Built-in relationship mapping.
+		* Testable.
 
 A collection of best practise standards from around the web and for our specific project needs.
+
 This work is licensed under a Creative Commons License by the contributors.
