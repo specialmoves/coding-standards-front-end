@@ -5,13 +5,13 @@
 		<meta charset="UTF-8" />
 		<meta name="description" content="A collection of web project and interface development standards and conventions" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Coding standards and development guidelines</title>
+		<title>Coding standards front end</title>
 		<link href="assets/styles/project.css" rel="stylesheet" />
 		<script src="assets/vendor/libs/modernizr.js"></script>
 	</head>
 	<body>
 		<header class="banner" role="banner">
-			<h1>Interface development standards</h1>
+			<h1>Coding standards front end</h1>
 		</header>
 
 		<nav class="navigation" role="navigation">
@@ -21,7 +21,7 @@
 				<li><a href="#development-process">Development process</a></li>
 			</ul>
 		</nav>
-		
+
 		<div role="main" class="main">
 			<article id="code-formatting">
 				<h1>Code formatting</h1>
@@ -29,7 +29,7 @@
 					<h1 class="beta">HTML</h1>
 					<ul>
 						<li>
-							Use <a href="http://dev.w3.org/html5/html-xhtml-author-guide/html-xhtml-authoring-guide.html">Polygot Markup</a> 
+							Use <a href="http://dev.w3.org/html5/html-xhtml-author-guide/html-xhtml-authoring-guide.html">Polygot Markup</a>
 							with the following emphasis:
 							<ul>
 								<li>
@@ -38,13 +38,13 @@
 								</li>
 								<li>Use double quotation marks for attributes.</li>
 								<li>
-									Use the minimized tag syntax, with a space before the closing slash, 
+									Use the minimized tag syntax, with a space before the closing slash,
 									for void elements, e.g. <code>&lt;br /&gt;</code>.
 								</li>
 							</ul>
 						</li>
 						<li>
-							Use consistent line breaks and indentation:
+							Use consistent line breaks:
 							<ul>
 								<li>Add line breaks only between sibling sectioning elements &amp; ARIA landmark roles.</li>
 								<li>Place inline tags on the same line.</li>
@@ -53,10 +53,9 @@
 								<li>Wrap long lines of text and treat as block-level elements, using 150 char length as a guide.</li>
 							</ul>
 						</li>
-						<li>Use tabs for indentation - length of 4 spaces.</li>
 					</ul>
 				</section>
-				
+
 				<section>
 					<h1 class="beta">CSS</h1>
 					<h2 class="gamma">Example of style</h2>
@@ -65,24 +64,24 @@
 	<span class="selector">.action .action-information</span>,
 	<span class="selector">.button .information:last-child</span> {
 		<span class="property">background</span>: <span class="property-value">url("../images/generic-logo.png") no-repeat center 0 #fff</span>;
-		<span class="property">background-image</span>: 
-			<span class="property-value">url("../images/generic-bg-bottom.png")</span>, 
+		<span class="property">background-image</span>:
+			<span class="property-value">url("../images/generic-bg-bottom.png")</span>,
 			<span class="property-value">url("../images/generic-bg-top.png")</span>;
 		<span class="property">border</span>: <span class="property-value">1px solid #000</span>;
 		<span class="property">-webkit-box-shadow</span>: <span class="comment">/* multiple properties on different lines */</span>
-			<span class="property-value">0 1px 3px rgba(0, 0, 0, .2)</span>, 
+			<span class="property-value">0 1px 3px rgba(0, 0, 0, .2)</span>,
 			<span class="property-value">0 2px 6px rgba(0, 0, 0, .1)</span>;
-		<span class="property">-moz-box-shadow</span>: 
-			<span class="property-value">0 1px 3px rgba(0, 0, 0, .2)</span>, 
-			<span class="property-value">0 2px 6px rgba(0, 0, 0, .1)</span>;	
-		<span class="property">-ms-box-shadow</span>: 
-			<span class="property-value">0 1px 3px rgba(0, 0, 0, .2)</span>, 
+		<span class="property">-moz-box-shadow</span>:
+			<span class="property-value">0 1px 3px rgba(0, 0, 0, .2)</span>,
 			<span class="property-value">0 2px 6px rgba(0, 0, 0, .1)</span>;
-		<span class="property">-o-box-shadow</span>: 
-			<span class="property-value">0 1px 3px rgba(0, 0, 0, .2)</span>, 
-			<span class="property-value">0 2px 6px rgba(0, 0, 0, .1)</span>;	
-		<span class="property">box-shadow</span>: 
-			<span class="property-value">0 1px 3px rgba(0, 0, 0, .2)</span>, 
+		<span class="property">-ms-box-shadow</span>:
+			<span class="property-value">0 1px 3px rgba(0, 0, 0, .2)</span>,
+			<span class="property-value">0 2px 6px rgba(0, 0, 0, .1)</span>;
+		<span class="property">-o-box-shadow</span>:
+			<span class="property-value">0 1px 3px rgba(0, 0, 0, .2)</span>,
+			<span class="property-value">0 2px 6px rgba(0, 0, 0, .1)</span>;
+		<span class="property">box-shadow</span>:
+			<span class="property-value">0 1px 3px rgba(0, 0, 0, .2)</span>,
 			<span class="property-value">0 2px 6px rgba(0, 0, 0, .1)</span>;
 		<span class="property">color</span>: <span class="property-value">#333</span>;
 		<span class="property">display</span>: <span class="property-value">block</span>;
@@ -129,7 +128,7 @@
 	<span class="property">border-left</span>: <span class="property-value">2px solid #000</span>;
 	<span class="property">border-right</span>: <span class="property-value">1px solid #000</span>;
 	<span class="property">border-top</span>: <span class="property-value">2px solid #000</span>;
-}						
+}
 </pre>
 					<h2 class="gamma">Property value order</h2>
 					<ul>
@@ -145,9 +144,24 @@
 	<span class="property">-ms-transition</span>:     <span class="property-value">all 700ms ease</span>;
 	<span class="property">-o-transition</span>:      <span class="property-value">all 700ms ease</span>;
 	<span class="property">transition</span>:         <span class="property-value">all 700ms ease</span>;
-}		
+}
 				</section>
-				
+
+				<section>
+					<h1 class="beta">Text formatting</h1>
+					<ul>
+						<li>
+							Use consistent, version-control-friendly text formatting:
+							<ul>
+								<li>Use tabs for indentation - length of 4 spaces.</li>
+								<li>Use <a href="http://help.github.com/line-endings/">UNIX-style line endings</a>.</li>
+								<li>Trim trailing whitespace from lines.</li>
+								<li>Ensure all text-based files end with a newline character.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
 				<section>
 					<h1 class="beta">Media assets</h1>
 					<h2 class="gamma">Naming conventions</h2>
@@ -157,7 +171,7 @@
 					</ul>
 				</section>
 			</article>
-			
+
 			<article>
 				<h1 id="development-guidelines">Development Guidelines</h1>
 				<section>
@@ -183,19 +197,19 @@
 							HTML5 microdata</a>.
 						</li>
 						<li>
-							Use <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a> landmark roles - 
-							see <a href="http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/">this blog post</a> 
+							Use <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a> landmark roles -
+							see <a href="http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/">this blog post</a>
 							for more information. Never use ARIA roles to target CSS styles.
-						</li>	
+						</li>
 						<li>
-							Place all <a href="http://html5boilerplate.com/docs/The-markup/">Javascript</a> before the closing 
+							Place all <a href="http://html5boilerplate.com/docs/The-markup/">Javascript</a> before the closing
 							<code>&lt;/body&gt;</code> tag, except <a href="http://www.modernizr.com">modernizr</a>.
-						</li>	
+						</li>
 						<li>Use Classes over IDs with the exception of:
 							<ul>
 								<li>In-page navigation.</li>
 							</ul>
-						</li>			
+						</li>
 					</ul>
 					<p>With the following exceptions:</p>
 					<ul>
@@ -217,9 +231,9 @@
 						</li>
 					</ul>
 				</section>
-				
+
 				<section>
-					<h1 class="beta">CSS</h1>							
+					<h1 class="beta">CSS</h1>
 					<h2 class="gamma">Structure of a stylesheet</h2>
 					<ol>
 						<li>fonts (including url to licence)</li>
@@ -302,18 +316,18 @@
 	<span class="selector">header</span> {
 		<span class="property">margin</span>: <span class="property-value">0</span>;
 	}
-	
+
 	<span class="comment">/* sectioning comment e.g. "primary navigation" */</span>
 		<span class="selector">header nav</span> {
 			<span class="property">float</span>: <span class="property-value">left</span>;
 		}
-	
+
 	<span class="comment">/* sectioning comment e.g. "search box" */</span>
 		<span class="selector">header search</span> {
 			<span class="property">display</span>: <span class="property-value">inline</span>; <span class="comment">/* property comment e.g. ie double margin fix */</span>
 		}
 </pre>
-					<h2 class="gamma">Selector naming</h2>	
+					<h2 class="gamma">Selector naming</h2>
 					<ul>
 						<li>
 							Use:
@@ -375,18 +389,18 @@
 					</p>
 					<ul>
 						<li>
-							Ensure the font is correctly licensed. 
+							Ensure the font is correctly licensed.
 							Find a licence using a <a href="http://sprungmarker.de/wp-content/uploads/webfont-services/">webfont service</a>.
 						</li>
 						<li>Ensure the rendering quality of the font is acceptable in all browsers.</li>
 						<li>Ensure acceptable loading times are maintained as fonts are added.</li>
 						<li>
-							Ensure the correct font weights are included and 
+							Ensure the correct font weights are included and
 							<a href="http://www.fontspring.com/support/troubleshooting/style-linking">linked correctly</a>.
 						</li>
 					</ul>
-					</section>	
-						
+					</section>
+
 					<section>
 						<h1 class="beta">Media assets</h1>
 						<h2 class="gamma">File structure</h2>
@@ -425,7 +439,7 @@
 						<li>Use PNG 24 for multi-channel transparency.</li>
 					</ul>
 				</section>
-				
+
 				<section>
 					<h1 class="beta">Accessibility</h1>
 					<ul>
@@ -434,7 +448,7 @@
 					</ul>
 				</section>
 			</article>
-			
+
 			<article id="development-process">
 				<h1 class="beta">Development Process</h1>
 				<ol>
@@ -521,12 +535,12 @@
 									<li>Demo of animation patterns.</li>
 									<li>Demo of interaction patterns.</li>
 									<li>Components built from the patterns.</li>
-								</ul>	
+								</ul>
 							</li>
 							<li>
 								and with the following features:
 								<ul>
-									<li>Self-annotating and with common language between design and development.</li>	
+									<li>Self-annotating and with common language between design and development.</li>
 									<li>A reference for default typography, padding, margin etc.</li>
 									<li>Built-in relationship mapping.</li>
 									<li>Testable.</li>
@@ -547,7 +561,7 @@
 					<dd>Assists with merges and diffs within version control.</dd>
 					<dt>Why those style convention?</dt>
 					<dd>
-						Widely used conventions and those used within <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> 
+						Widely used conventions and those used within <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>
 						and CSS3 generators like <a href="http://css3please.com/">css3please</a>.
 					</dd>
 					<dd>
@@ -570,11 +584,11 @@
 				</dl>
 			</details>
 		</aside>
-		
+
 		<footer class="content-info" role="contentinfo">
 			<p>
 				<small>
-					This work is licensed under a 
+					This work is licensed under a
 					<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">Creative Commons License</a>
 					by the <a href="https://github.com/specialmoves/coding-standards-front-end/contributors">contributors</a>.
 				</small>
