@@ -12,8 +12,8 @@
 	* Add line breaks only between sibling sectioning elements & ARIA landmark roles.
 	* Place inline tags on the same line.
 	* Place block-level tags on a new line and indented.
-	* Include templating serverside code as part of the nesting of elements.
-	* Wrap long lines of text and treat as block-level elements, using 150 char length as a guide.
+	* Include templating serverside code as part of the nesting of element.
+	* Wrap long lines of text and treat as block-level elements, using 150 character length as a guide.
 
 ##CSS
 
