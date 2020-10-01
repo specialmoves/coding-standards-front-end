@@ -4,7 +4,7 @@
 
 ##HTML
 
-* Use Polygot Markup with the following emphasis:
+* Use Polygot Markup with the following emphasis:-
 	* Use XHTML compliant Boolean attributes e.g. &lt;input type="text" required="required" /&gt;.
 	* Use double quotation marks for attributes.
 	* Use the minimized tag syntax, with a space before the closing slash, for void elements, e.g. &lt;br /&gt;.
