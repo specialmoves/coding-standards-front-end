@@ -1,8 +1,8 @@
-#Coding standards front end
+> Coding standards front end
 
-##Code formatting
+>> Code formatting
 
-##HTML
+>>> HTML
 
 * Use Polygot Markup with the following emphasis:
 	* Use XHTML compliant Boolean attributes e.g. &lt;input type="text" required="required" /&gt;.
